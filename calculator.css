@@ -1,0 +1,83 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0e0e0;
+}
+
+.Calculator {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    width: 320px; /* Adjust width as needed */
+}
+
+.display {
+    background-color: #222;
+    color: #fff;
+    font-size: 2em;
+    text-align: right;
+    padding: 20px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #444;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px; /* Space between buttons */
+}
+
+.buttons button {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    font-size: 1.5em;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+    box-sizing: border-box;
+}
+
+.buttons button:hover {
+    background-color: #f0f0f0;
+}
+
+.buttons button:active {
+    background-color: #ddd;
+}
+
+.buttons button.operator {
+    background-color: #f90;
+    color: #fff;
+}
+
+.buttons button.operator:hover {
+    background-color: #e80;
+}
+
+.buttons button.operator:active {
+    background-color: #d70;
+}
+
+.buttons button.double {
+    grid-column: span 2; /* Make '0' button span 2 columns */
+}
+
+.buttons button.equals {
+    background-color: #4caf50;
+    color: #fff;
+    grid-column: span 4; /* Make '=' button span 4 columns */
+}
+
+.buttons button.equals:hover {
+    background-color: #45a049;
+}
+
+.buttons button.equals:active {
+    background-color: #388e3c;
+}
